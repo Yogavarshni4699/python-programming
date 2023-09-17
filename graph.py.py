@@ -10,7 +10,7 @@ import streamlit as st
 
 df1=pd.read_csv("Fish.csv")
 df1
-st.write("Generating Bocplot")
+st.write("Generating BoxPlot")
 x=list(df1.iloc[:,0])
 y=list(df1.iloc[:,1])
 plt.bar(x,y)
