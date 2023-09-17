@@ -8,7 +8,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import streamlit as st
 
-drop=st.selectbox("What type of plot to choose?",options=("BarPlot","No Plot"),index=0,help="Choose a plot option in dropdown",disabled=False)
+drop=st.selectbox("What type of plot to choose?",options=("BarPlot","No Plot"),index=0,help="Choose a plot option in dropdown")
 st.write("You chose", drop,"Chart")
 
 df1=pd.read_csv("fish.csv")
