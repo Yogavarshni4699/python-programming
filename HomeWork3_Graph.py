@@ -23,7 +23,7 @@ if drop=="ScatterPlot":
     st.set_option('deprecation.showPyplotGlobalUse', False)
     st.pyplot(ScatterPlot)
     
-elif drop=="BarPlot":
+else drop=="BarPlot":
 
     x=list(df1.iloc[:,0])
     y=list(df1.iloc[:,1])
