@@ -21,6 +21,7 @@ if drop=="BarPlot":
     plt.xlabel('Species')
     plt.ylabel('Weight')
     plt.title('Weight of each Species')
+    st.set_option('deprecation.showPyplotGlobalUse', False)
     
     BarPlot=plt.show()
     st.pyplot(BarPlot)
