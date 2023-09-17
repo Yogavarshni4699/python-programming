@@ -11,7 +11,7 @@ import streamlit as st
 drop=st.selectbox("What type of plot to choose?",options=("BarPlot","No Plot"),index=0,help="Choose a plot option in dropdown")
 st.write("You chose", drop,"Chart")
 
-df1=pd.read_csv("fish.csv")
+df1=pd.read_csv("Fish.csv")
 df1
 if drop=="BarPlot":
 
