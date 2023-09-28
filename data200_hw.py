@@ -27,7 +27,7 @@ st.write(fig)
 # Display the plot in Streamlit
 #st.pyplot(plot.get_figure())
 
-st.write(to know about the dataset)
+st.write("to know about the dataset")
 Churn_df.columns
 Churn_df1=Churn_df.describe()
 st.dataframe(Churn_df1)
