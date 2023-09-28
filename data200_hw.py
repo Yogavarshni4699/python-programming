@@ -7,8 +7,8 @@ import seaborn as sns
 #read the data
 Churn_df = pd.read_csv('/content/Telecom Churn.csv')
 st.write("Data:")
-st.write(Churn_df.head())
-
+Churn_df.head()
+st.dataframe(Churn_df)
 
 #check duplicate
 Churn_df.duplicated().sum()
@@ -56,7 +56,7 @@ st.write(f"Percentage of Customer Churn: {round(Perc_churn,2)} %")
 st.write("State Wise Customer Churning")
 State_cus_churn = CustChurn_df.groupby(['States'])['Churn'].value_counts().reset_index(name='Churn_Customers')
 st.write(State_cus_churn.sum())
-State_cus_churn
+st.dataframe(State_cus_churn)
 
 #Area Code wise Churn Counts
 Area_code_churn_count= CustChurn_df.groupby(['Area code'])['Churn'].value_counts().reset_index(name="Count")
@@ -71,6 +71,4 @@ st.write(plt.title("Total Percentage of Churn"))
 #Display Chart
 st.plt.show()
 
-st.write("From the above chart we got to know that , there are 2850 customers not churned which is 85.5% of the whole customer data given in the dataset. 
-In othger words,  483 customers are churned which is 14.5%. It is not very high
-but still churn is bad for business. So churn rate insights are very helpful for furthur decisions.")
+st.write("From the above chart we got to know that , there are 2850 customers not churned which is 85.5% of the whole customer data given in the dataset. In othger words,  483 customers are churned which is 14.5%. It is not very highbut still churn is bad for business. So churn rate insights are very helpful for furthur decisions.")
