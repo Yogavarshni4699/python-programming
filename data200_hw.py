@@ -6,7 +6,7 @@ import seaborn as sns
 
 #read the data
 Churn_df = pd.read_csv("Telecom_Churn.csv")
-st.write("Data:")
+st.write("Data - Telecom Churn:")
 Churn_df.head()
 st.dataframe(Churn_df)
 
@@ -58,7 +58,7 @@ State_cus_churn = CustChurn_df.groupby(['States'])['Churn'].value_counts().reset
 #Summed= State_cus_churn.sum()
 st.dataframe(State_cus_churn)
 
-st.write("State MD has the highest number of churn")
+st.write("State TX has the highest number of churn")
 
 # Display the chart using Streamlit
 fig, ax = plt.subplots()
