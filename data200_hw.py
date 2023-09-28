@@ -23,20 +23,14 @@ fig, ax = plt.subplots()
 sns.heatmap(Churn_df.isnull(), ax=ax)
 st.write(fig)
 
-#st.write("To know about the dataset")
-#Churn_df.columns
-#Churn_df1=Churn_df.describe()
-#st.dataframe(Churn_df1)
+st.write("To know about the dataset")
+Churn_df1=Churn_df.describe()
+st.dataframe(Churn_df1)
 
-#checking on the unique value
-for i in Churn_df:
-  print("No of unique value in",i,"is",Churn_df[i].nunique())
-  
 st.write("Few findings from the data:")
 
 Churned=Churn_df[Churn_df['Churn']== True].Churn.count()
 st.write("No of customers churning:", Churned)
-
 CustChurn_df= Churn_df[Churn_df['Churn']== True]
 
 #unique areacode
@@ -53,15 +47,15 @@ st.write("No of customers having Voice mail plan:", Voice_mail)
 
 # % of total custom churning
 Total_cut_churn=Churn_df.Churn.count()
-st.write("Total customers",Total_cut_churn)
+st.write("Total customers:",Total_cut_churn)
 # % of churn
 Perc_churn= (CustChurn_df.Churn.count()/Churn_df.Churn.count()*100)
 #{round(Perc_churn,2)} %
 st.write("Percentage of Customer Churn in %:", Perc_churn)
 
-#st.write("State Wise Customer Churning")
-#State_cus_churn = CustChurn_df.groupby(['States'])['Churn'].value_counts().reset_index(name='Churn_Customers')
-#st.write("worked:")
+st.write("State Wise Customer Churning")
+State_cus_churn = CustChurn_df.groupby(['States'])['Churn'].value_counts().reset_index(name='Churn_Customers')
+st.write("worked:")
 #total_churned_customers = State_cus_churn['Churn_Customers'].sum()
 #total_churned_customers = State_cus_churn.sum()
 #st.write("Total Churned Customers:")
