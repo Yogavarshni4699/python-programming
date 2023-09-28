@@ -69,4 +69,4 @@ plt.title("Total Percentage of Churn")
 # Display the chart using Streamlit
 st.pyplot(fig)
 
-st.write("From the above chart we got to know that, there are 2850 customers not churned which is 85.5% of the whole customer data given in the dataset. In othger words,  483 customers are churned which is 14.5%. It is not very highbut still churn is bad for business. So churn rate insights are very helpful for furthur decisions.")
+st.write("From the chart we got to know that there are 2850 customers not churned which is 85.5% of the whole customer data given in the dataset. In other words, 483 customers are churned which is 14.5%. It is not very high but still, churn is bad for business. So churn rate insights are very helpful for further decisions")
