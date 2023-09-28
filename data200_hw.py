@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 #read the data
-Churn_df = pd.read_csv('/content/Telecom Churn.csv')
+Churn_df = pd.read_csv("Telecom_Churn.csv")
 st.write("Data:")
 Churn_df.head()
 st.dataframe(Churn_df)
