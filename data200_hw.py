@@ -18,7 +18,7 @@ Churn_df.isnull().sum()
 
 #Visualizing null value
 # Display the heatmap
-st.write("Heatmap of Missing Data (NaN values):")
+st.write("Heatmap to check Missing Data:")
 plot = sns.heatmap(Churn_df.isnull(), annot=True) 
 # Display the plot in Streamlit
 st.pyplot(plot.get_figure())
