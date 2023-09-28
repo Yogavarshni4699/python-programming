@@ -61,6 +61,6 @@ st.write("Percentage of Customer Churn in %:", Perc_churn)
 
 st.write("State Wise Customer Churning")
 State_cus_churn = CustChurn_df.groupby(['States'])['Churn'].value_counts().reset_index(name='Churn_Customers')
-State_cus_churn1=State_cus_churn.sum())
+State_cus_churn1=State_cus_churn.sum()
 st.dataframe(State_cus_churn1)
 st.write("State MD has the highest number of churn")
