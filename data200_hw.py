@@ -50,7 +50,7 @@ st.write("No of customers having International plan:", International)
 #Voice mail plan
 Voice_mail=Churn_df[Churn_df['Voice mail plan']=="Yes"]['Voice mail plan'].count()
 st.write("No of customers having Voice mail plan:", Voice_mail)
--------------------------------------------------------------------------------------
+
 # % of total custom churning
 Total_cut_churn=Churn_df.Churn.count()
 st.write("Total customers",Total_cut_churn)
