@@ -71,7 +71,7 @@ st.write("Percentage of Customer Churn in %:", Perc_churn)
 
 # Display the chart using Streamlit
 fig, ax = plt.subplots()
-churn_counts.plot(kind='pie', figsize=(10, 6), autopct="%1.1f%%", startangle=50, shadow=True,
+Churn_df['Churn'].value_counts().plot(kind='pie', figsize=(10, 6), autopct="%1.1f%%", startangle=50, shadow=True,
                   labels=['Not Churn %', 'Churn %'], colors=['green', 'red'], explode=[0.12, 0])
 plt.title("Total Percentage of Churn")
 
