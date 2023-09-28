@@ -61,6 +61,18 @@ st.write("Percentage of Customer Churn in %:", Perc_churn)
 
 st.write("State Wise Customer Churning")
 State_cus_churn = CustChurn_df.groupby(['States'])['Churn'].value_counts().reset_index(name='Churn_Customers')
-State_cus_churn1=State_cus_churn.sum()
-st.dataframe(State_cus_churn1)
+total_churned_customers = State_cus_churn['Churn_Customers'].sum()
+st.write(f"Total Churned Customers: {total_churned_customers}")
+
 st.write("State MD has the highest number of churn")
+
+# Display the chart using Streamlit
+fig, ax = plt.subplots()
+churn_counts.plot(kind='pie', figsize=(10, 6), autopct="%1.1f%%", startangle=50, shadow=True,
+                  labels=['Not Churn %', 'Churn %'], colors=['green', 'red'], explode=[0.12, 0])
+plt.title("Total Percentage of Churn")
+
+# Display the chart using Streamlit
+st.pyplot(fig)
+
+st.write("From the above chart we got to know that, there are 2850 customers not churned which is 85.5% of the whole customer data given in the dataset. In othger words,  483 customers are churned which is 14.5%. It is not very highbut still churn is bad for business. So churn rate insights are very helpful for furthur decisions.")
