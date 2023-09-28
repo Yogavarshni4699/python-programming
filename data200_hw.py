@@ -59,15 +59,15 @@ Perc_churn= (CustChurn_df.Churn.count()/Churn_df.Churn.count()*100)
 #{round(Perc_churn,2)} %
 st.write("Percentage of Customer Churn in %:", Perc_churn)
 
-st.write("State Wise Customer Churning")
-State_cus_churn = CustChurn_df.groupby(['States'])['Churn'].value_counts().reset_index(name='Churn_Customers')
-st.write("worked:")
+#st.write("State Wise Customer Churning")
+#State_cus_churn = CustChurn_df.groupby(['States'])['Churn'].value_counts().reset_index(name='Churn_Customers')
+#st.write("worked:")
 #total_churned_customers = State_cus_churn['Churn_Customers'].sum()
-total_churned_customers = State_cus_churn.sum()
-st.write("Total Churned Customers:")
-st.dataframe(total_churned_customers)
+#total_churned_customers = State_cus_churn.sum()
+#st.write("Total Churned Customers:")
+#st.dataframe(total_churned_customers)
 
-st.write("State MD has the highest number of churn")
+#st.write("State MD has the highest number of churn")
 
 # Display the chart using Streamlit
 fig, ax = plt.subplots()
